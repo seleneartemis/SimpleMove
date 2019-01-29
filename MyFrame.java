@@ -6,7 +6,7 @@ public class MyFrame extends JFrame implements KeyListener{
 
 	Draw drawing;
 
-	public MyFrame(){
+	public MyFrame() {
 		this.drawing = new Draw();
 	}
 
@@ -31,6 +31,22 @@ public class MyFrame extends JFrame implements KeyListener{
 			System.out.println("pos: " + drawing.x + ", " + drawing.y);
 			drawing.moveLeft();
 		}
+
+		else if (e.getKeyCode() == KeyEvent.VK_C){
+			drawing.attack();
+			System.out.println("attack");
+		}
+
+		else if (e.getKeyCode() == KeyEvent.VK_SPACE){
+			drawing.jump();
+			System.out.println("jump");
+		}
+
+		else if (e.getKeyCode() == KeyEvent.VK_X){
+			drawing.slide();
+			System.out.println("slide");
+		}
+
 
 		drawing.reloadImage();
 
